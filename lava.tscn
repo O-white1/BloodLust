@@ -1,22 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://v1a5l7pw86ad"]
+[gd_scene load_steps=8 format=3 uid="uid://1jbmrha5kfw1"]
 
-[ext_resource type="Script" path="res://blood_sponge.gd" id="1_k6dud"]
-[ext_resource type="Texture2D" uid="uid://dqvlo2s3e834p" path="res://Assets/ProjectUtumno_full.png" id="1_sapjx"]
+[ext_resource type="Script" path="res://blood_sponge.gd" id="1_0jnfh"]
+[ext_resource type="Texture2D" uid="uid://dqvlo2s3e834p" path="res://Assets/ProjectUtumno_full.png" id="2_4mfyh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nldg3"]
-atlas = ExtResource("1_sapjx")
+atlas = ExtResource("2_4mfyh")
 region = Rect2(2016, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sh03i"]
-atlas = ExtResource("1_sapjx")
+atlas = ExtResource("2_4mfyh")
 region = Rect2(1984, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6bkpy"]
-atlas = ExtResource("1_sapjx")
+atlas = ExtResource("2_4mfyh")
 region = Rect2(1952, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rmo0j"]
-atlas = ExtResource("1_sapjx")
+atlas = ExtResource("2_4mfyh")
 region = Rect2(1920, 160, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ruc0x"]
@@ -39,11 +39,11 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="Lava animation" type="Node2D"]
-script = ExtResource("1_k6dud")
+[node name="Lava animation" type="StaticBody2D"]
+script = ExtResource("1_0jnfh")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 sprite_frames = SubResource("SpriteFrames_ruc0x")
-frame_progress = 0.656351
+frame_progress = 0.753389
