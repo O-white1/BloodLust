@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://g2jixshsgpx"]
+
+[ext_resource type="Texture2D" uid="uid://dqvlo2s3e834p" path="res://Assets/ProjectUtumno_full.png" id="1_gkpkc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3jbl"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1504, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ery5s"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1536, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s60y"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1568, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11c0t"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1600, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld8nc"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1632, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0ptc"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1664, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdo2y"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1696, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipdlh"]
+atlas = ExtResource("1_gkpkc")
+region = Rect2(1728, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yslw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3jbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ery5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s60y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11c0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld8nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0ptc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdo2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipdlh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_yslw0")
+frame_progress = 0.0922474
