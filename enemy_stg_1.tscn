@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://sww3gp5nmyai"]
+
+[ext_resource type="Texture2D" uid="uid://dqvlo2s3e834p" path="res://Assets/ProjectUtumno_full.png" id="1_66igr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcsik"]
+atlas = ExtResource("1_66igr")
+region = Rect2(896, 1952, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jwbw"]
+atlas = ExtResource("1_66igr")
+region = Rect2(352, 2368, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxbh6"]
+atlas = ExtResource("1_66igr")
+region = Rect2(1600, 2336, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg258"]
+atlas = ExtResource("1_66igr")
+region = Rect2(1632, 2336, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0gv5"]
+atlas = ExtResource("1_66igr")
+region = Rect2(352, 1632, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjlna"]
+atlas = ExtResource("1_66igr")
+region = Rect2(896, 1952, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdgjm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcsik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jwbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxbh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg258")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_u0gv5")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjlna")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_50vs6"]
+
+[node name="Enemy stg1" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jdgjm")
+animation = &"death"
+frame = 4
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_50vs6")

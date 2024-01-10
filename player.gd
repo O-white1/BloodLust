@@ -17,6 +17,15 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Dash"):
 		$AnimatedSprite2D.play('Dash')
+	if Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right"):
+		$AnimatedSprite2D.play("move")
+	if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down"):
+		$AnimatedSprite2D.play("move")
+	if Input.is_action_just_released("ui_left") or Input.is_action_just_released("ui_right"):
+		$AnimatedSprite2D.play('idle')
+	if Input.is_action_just_released("ui_up") or Input.is_action_just_released("ui_down"):
+		$AnimatedSprite2D.play('idle')
+		pass
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -37,5 +46,10 @@ func _physics_process(delta):
 	if direction.x != 0:
 				$AnimatedSprite2D.flip_h = direction.x > 0
 func Dash():
+	if look_direction == 1:
+		position.x += 10
+	elif look_direction == 0:
+		position.x -= 10
+	
 	pass 
 	

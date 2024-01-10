@@ -1,11 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://beuno7rvrdh1j"]
+[gd_scene load_steps=15 format=3 uid="uid://beuno7rvrdh1j"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_t6pvm"]
 [ext_resource type="Texture2D" uid="uid://dqvlo2s3e834p" path="res://Assets/ProjectUtumno_full.png" id="2_c84vh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r68ea"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_csdqf"]
 atlas = ExtResource("2_c84vh")
-region = Rect2(832, 2368, 32, 32)
+region = Rect2(672, 2368, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83n58"]
+atlas = ExtResource("2_c84vh")
+region = Rect2(672, 2368, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eas8e"]
 atlas = ExtResource("2_c84vh")
@@ -27,19 +31,26 @@ region = Rect2(320, 2368, 32, 32)
 atlas = ExtResource("2_c84vh")
 region = Rect2(672, 2368, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3p6j7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_myt2k"]
 atlas = ExtResource("2_c84vh")
-region = Rect2(832, 2368, 32, 32)
+region = Rect2(672, 2368, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hibmx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_23tig"]
 atlas = ExtResource("2_c84vh")
-region = Rect2(832, 2368, 32, 32)
+region = Rect2(672, 2368, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_one5y"]
+atlas = ExtResource("2_c84vh")
+region = Rect2(800, 2368, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_btk8b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r68ea")
+"texture": SubResource("AtlasTexture_csdqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83n58")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eas8e")
@@ -57,7 +68,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_mojti")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3p6j7")
+"texture": SubResource("AtlasTexture_myt2k")
 }],
 "loop": false,
 "name": &"Dash",
@@ -65,10 +76,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hibmx")
+"texture": SubResource("AtlasTexture_23tig")
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_one5y")
+}],
+"loop": true,
+"name": &"move",
 "speed": 5.0
 }]
 
@@ -80,7 +99,7 @@ script = ExtResource("1_t6pvm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2.38419e-07, 0)
 sprite_frames = SubResource("SpriteFrames_btk8b")
-animation = &"Dash"
+animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6a5of")
