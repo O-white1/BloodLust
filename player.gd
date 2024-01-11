@@ -9,6 +9,7 @@ var charge_start_time = 0.0
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
+var attacks = ["primary", "secondary", "ranged", "power"]
 
 
 
@@ -17,6 +18,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Dash"):
 		$AnimatedSprite2D.play('Dash')
+		Dash()
+		
+		
 	if Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right"):
 		$AnimatedSprite2D.play("move")
 	if Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down"):

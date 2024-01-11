@@ -1,10 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://sww3gp5nmyai"]
+[gd_scene load_steps=12 format=3 uid="uid://sww3gp5nmyai"]
 
+[ext_resource type="Script" path="res://enemy_stg_1.gd" id="1_5e3ea"]
 [ext_resource type="Texture2D" uid="uid://dqvlo2s3e834p" path="res://Assets/ProjectUtumno_full.png" id="1_66igr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pcsik"]
 atlas = ExtResource("1_66igr")
 region = Rect2(896, 1952, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gaxo"]
+atlas = ExtResource("1_66igr")
+region = Rect2(608, 1920, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3jwbw"]
 atlas = ExtResource("1_66igr")
@@ -33,6 +38,9 @@ animations = [{
 "texture": SubResource("AtlasTexture_pcsik")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_3gaxo")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_3jwbw")
 }, {
 "duration": 1.0,
@@ -55,17 +63,29 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 2.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"walk",
+"speed": 15.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_50vs6"]
 
 [node name="Enemy stg1" type="CharacterBody2D"]
+script = ExtResource("1_5e3ea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jdgjm")
-animation = &"death"
-frame = 4
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_50vs6")
+
+[node name="RayCast2DR" type="RayCast2D" parent="."]
+target_position = Vector2(-32, -32)
+
+[node name="RayCast2DM" type="RayCast2D" parent="."]
+target_position = Vector2(-64, 0)
+
+[node name="RayCast2DL" type="RayCast2D" parent="."]
+target_position = Vector2(-32, 32)
