@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba7brn6j02ala"]
+
+[ext_resource type="Script" path="res://PrimaeyATK.gd" id="1_u8jrg"]
+
+[node name="PrimaeyATK" type="Node2D"]
+script = ExtResource("1_u8jrg")
