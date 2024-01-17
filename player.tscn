@@ -1,10 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://beuno7rvrdh1j"]
+[gd_scene load_steps=8 format=3 uid="uid://beuno7rvrdh1j"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_t6pvm"]
+[ext_resource type="Texture2D" uid="uid://b28a4ktx1v3ie" path="res://Assets/ProjectUtumno_full.png" id="2_y4e2n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj4e2"]
+atlas = ExtResource("2_y4e2n")
+region = Rect2(1664, 2336, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_178mu"]
+atlas = ExtResource("2_y4e2n")
+region = Rect2(1600, 2336, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1uepn"]
+atlas = ExtResource("2_y4e2n")
+region = Rect2(1632, 2336, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_btk8b"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj4e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_178mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1uepn")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
